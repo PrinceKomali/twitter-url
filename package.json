@@ -1,0 +1,14 @@
+{
+  "name": "twitter-url",
+  "version": "1.0.1",
+  "description": "Crude but effective way of getting the internal twitter video url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Prince Komali",
+  "license": "ISC",
+  "dependencies": {
+    "sync-fetch": "^0.3.0"
+  }
+}
