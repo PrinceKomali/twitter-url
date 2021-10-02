@@ -2,7 +2,7 @@
 # twitter-url
 A very crude way to get the internal twitter video url
 ```js
-let  {parseUrl, getDetailsConsise} = require("twitter-url");
+let  {parseUrl, getDetailsConcise} = require("twitter-url");
 let {id} = parseUrl("https://twitter.com/LetMeThinkOfAU1/status/1334241608078790659");
 let  details = getDetailsConcise(id);
 
