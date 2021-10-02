@@ -20,7 +20,7 @@ let twurl = {
 		return [data.guest_token, token];
 	},
 	getDetails: function(id) {
-		let gtoken = this._getCredentials(id);
+		let gtoken = twurl._getCredentials(id);
 		let data = sfetch("https://api.twitter.com/2/timeline/conversation/" + id + ".json", {
 			headers: {
 				"Authorization": gtoken[1],
@@ -30,7 +30,7 @@ let twurl = {
 		return data;
 	},
 	getDetailsConcise: function(id) {
-		let data = this.getDetails(id);
+		let data = twurl.getDetails(id);
 		let videos = data.globalObjects.tweets[id].extended_entities.media[0].video_info;
         let highest_url = videos.variants.sort((a,b)=>{ if(!b.bitrate) return -1; return Number(a.url.split("/")[7].split("x")[0]) > Number(b.url.split("/")[7].split("x")[0]) ? -1 : 1; })[0].url;
 		let title = data.globalObjects.tweets[id].text;
